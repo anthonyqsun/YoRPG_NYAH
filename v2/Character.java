@@ -18,5 +18,6 @@ public class Character {
 
   public void attack(Character char) {
     int damage = (int) (strength*attackRating - char.defense);
+    char.health = char.health - damage;
   }
 }
