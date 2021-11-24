@@ -2,18 +2,18 @@
  * class YoRPG -- Driver file for Ye Olde Role Playing Game.
  * Simulates monster encounters of a wandering adventurer.
  * Required classes: Protagonist, Monster
- * 
+ *
  * USAGE:
  * Compile. Note messages generated.
  * Devise a plan of attack with your trio.
  * Code incrementally, testing each bit of new functionality as you go.
  * The only modification you should make to this driver file is moving comment bar down in main method, and filling in DISCO/QCC
  * (If you feel other changes are merited, note what and why, so that we may discuss on the 'morrow.)
- * 
+ *
  * DISCO:
  *
  * QCC:
- * 
+ *
  **********************************************/
 
 import java.io.*;
@@ -27,12 +27,13 @@ public class YoRPG {
   public final static int MAX_ENCOUNTERS = 5;
 
   //each round, a Protagonist and a Monster will be instantiated...
-  private Protagonist pat;
+  private Character pat;
   private Monster smaug;
 
   private int moveCount;
   private boolean gameOver;
   private int difficulty;
+  private int heroChoice;
 
   private InputStreamReader isr;
   private BufferedReader in;
@@ -85,7 +86,27 @@ public class YoRPG {
     catch ( IOException e ) { }
 
     //instantiate the player's character
-    pat = new Protagonist( name );
+
+    s = "\nChoose your Hero!: \n";
+    s += "\t1: Fighter\n";
+    s += "\t2: Tank\n";
+    s += "\t3: Healer\n";
+    s += "Selection: ";
+    System.out.print( s );
+
+    try {
+      heroChoice = Integer.parseInt( in.readLine() );
+    }
+    catch ( IOException e ) { }
+
+    if (heroChoice == 1){
+      pat = new Fighter( name );
+    }else if (heroChoice == 2){
+      pat = new Tank( name );
+    }else{
+      pat = new Healer( name );
+    }
+
 
   }//end newGame()
 
@@ -177,9 +198,8 @@ public class YoRPG {
 
     System.out.println( "Thy game doth be over." );
     /*================================================
-    
+
 	  ================================================*/
   }//end main
 
 }//end class YoRPG
-

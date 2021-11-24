@@ -16,8 +16,10 @@ public class Character {
     health -= h;
   }
 
-  public void attack(Character chara) {
+  public int attack(Character chara) {
     int damage = (int) (strength*attackRating - chara.defense);
-    chara.lowerHP(damage);
+    int modifer = (int) (Math.random()*6) - 3;
+    chara.lowerHP(damage + modifer);
+    return damage + modifer;
   }
 }
