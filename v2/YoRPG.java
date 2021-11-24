@@ -124,9 +124,22 @@ public class YoRPG {
     if ( Math.random() >= ( difficulty / 3.0 ) )
 	    System.out.println( "\nNothing to see here. Move along!" );
     else {
-	    System.out.println( "\nLo, yonder monster approacheth!" );
+	    //System.out.println( "\nLo, yonder monster approacheth!" );
 
-	    smaug = new Monster();
+	    //Randomize the type of monster based on the difficulty
+      monsterRandomizer = (Math.random() * difficulty);
+      if (monsterRandomizer <= 0.5) {
+        smaug = new Goblin();
+        System.out.println( "\nLo, yonder Goblin approacheth!" );
+      }else if (monsterRandomizer <= 2.0) {
+        smaug = new Troll();
+        System.out.println( "\nLo, yonder Troll approacheth!" );
+      }else if (monsterRandomizer <= 3.0){
+        smaug = new Dragon();
+        System.out.println( "\nLo, yonder Dragon approacheth!" );
+      }
+	    
+	    //smaug = new Monster();
 
 	    while( smaug.isAlive() && pat.isAlive() ) {
 
