@@ -15,6 +15,11 @@
  * QCC:
  *
  **********************************************/
+/*
+OUR DRIVER MODS
+(95-113): Add a way for the player to choose which subclass of Protagonist they want to be
+(136-146): Add a randomizer to choose which subclass of Monster the monster is based on the difficulty
+*/
 
 import java.io.*;
 import java.util.*;
