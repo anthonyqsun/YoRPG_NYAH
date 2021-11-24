@@ -29,3 +29,14 @@
 ### Dragon
 - "This fiery beast is one you don't wanna mess with."
 - strength is greatly increased.
+---
+## Version-to-Version Changes
+### v0
+- Add the Protagonist and Monster classes with all of the methods and variable which we knew we needed from the drived class
+### v1
+- Add the Character superclass and made the Protagonist and Monster classes subclasses of Character
+### v2
+- Add Protagonist subclasses: Fighter, Tank, and Healer
+- Add Monster subclasses: Goblin, Troll, and Dragon
+- Modify the driver class so that the player can choose their role
+- Add a randomizer in the driver class to choose the type of Monster
