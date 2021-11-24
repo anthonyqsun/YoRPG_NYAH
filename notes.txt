@@ -1,9 +1,0 @@
-DISCOS:
-- super() calls the constructor of a class' superclass
-- using char as a parameter gives an error because it is a reserved keyword.
-- you can pass the current object into an inherited method as a parameter using "this" keyword.
-
-QCC:
-- What is the most efficient way to handle all 3 classes in our driver file?
-- Is it possible to play all 3 characters at once?
-- How are we able to call methods in both a class and its superclass?

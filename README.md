@@ -23,7 +23,7 @@
 - Increases attackRating by up to 0.5.
 
 ### Troll
-- "This beast ate one too many taco bell meals: he can take a beating on both the toilet and the battlefield."
+- "This beast ate one too many taco bell meals. It can take a beating on both the toilet and the battlefield."
 - Health increased, defense increased.
 
 ### Dragon
