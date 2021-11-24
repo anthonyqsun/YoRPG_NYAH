@@ -94,9 +94,9 @@ public class YoRPG {
     //instantiate the player's character
 
     s = "\nChoose your Hero!: \n";
-    s += "\t1: Fighter\n";
-    s += "\t2: Tank\n";
-    s += "\t3: Healer\n";
+    s += "\t1: Fighter: " + Fighter.about() + "\n";
+    s += "\t2: Tank: " + Tank.about() + "\n";
+    s += "\t3: Healer: " + Healer.about() + "\n";
     s += "Selection: ";
     System.out.print( s );
 
@@ -106,10 +106,13 @@ public class YoRPG {
     catch ( IOException e ) { }
 
     if (heroChoice == 1){
+      System.out.println();
       pat = new Fighter( name );
     }else if (heroChoice == 2){
+      System.out.println();
       pat = new Tank( name );
     }else{
+      System.out.println();
       pat = new Healer( name );
     }
 
