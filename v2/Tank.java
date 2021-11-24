@@ -1,14 +1,16 @@
-public class Fighter extends Protagonist {
+public class Tank extends Protagonist{
   protected int defaultDefense;
-  
-  public Fighter(){
+
+  public Tank(){
     super();
-    strength = 15;
+    health = 100;
+    strength = 6;
     defaultDefense = defense;
   }
+  
   public void specialize() {
-    attackRating = 1.3;
-    defense = defaultDefense - 2;
+    attackRating = 0.7;
+    defense = defaultDefense + 4;
   }
 
   public void normalize() {

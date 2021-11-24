@@ -16,8 +16,8 @@ public class Character {
     health -= h;
   }
 
-  public void attack(Character char) {
-    int damage = (int) (strength*attackRating - char.defense);
-    char.health = char.health - damage;
+  public void attack(Character chara) {
+    int damage = (int) (strength*attackRating - chara.defense);
+    chara.lowerHP(damage);
   }
 }
