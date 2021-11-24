@@ -18,7 +18,7 @@ public class Tank extends Protagonist{
   }
 
   public void specialize() {
-    attackRating = 0.7;
+    attackRating = 0.8;
     defense = defaultDefense + 4;
   }
 

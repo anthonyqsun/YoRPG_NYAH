@@ -22,7 +22,7 @@ public class Character {
     int modifier = (int) (Math.random()*6) - 3;
     totalDamage = damage + modifier;
     if (totalDamage < 0) {
-      totalDamage = 0;
+      totalDamage = Math.abs(totalDamage);
     }
     chara.lowerHP(totalDamage);
     return totalDamage;
