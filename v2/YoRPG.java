@@ -27,14 +27,13 @@ public class YoRPG {
   public final static int MAX_ENCOUNTERS = 5;
 
   //each round, a Protagonist and a Monster will be instantiated...
-  // private Protagonist pat;
+  private Protagonist pat;
   private Monster smaug;
 
   private int moveCount;
   private boolean gameOver;
   private int difficulty;
   private int heroChoice;
-  private String _name;
 
   private InputStreamReader isr;
   private BufferedReader in;
@@ -100,7 +99,13 @@ public class YoRPG {
     }
     catch ( IOException e ) { }
 
-    _name = name;
+    if (heroChoice == 1){
+      pat = new Fighter( name );
+    }else if (heroChoice == 2){
+      pat = new Tank( name );
+    }else{
+      pat = new Healer( name );
+    }
 
 
   }//end newGame()
@@ -112,7 +117,7 @@ public class YoRPG {
     post: Returns true if player wins (monster dies).
     Returns false if monster wins (player dies).
     =============================================*/
-  public boolean playTurn(Protagonist pat) {
+  public boolean playTurn() {
     int i = 1;
     int d1, d2;
 
@@ -182,18 +187,10 @@ public class YoRPG {
     //loading...
     YoRPG game = new YoRPG();
 
-    if (game.heroChoice == 1){
-      Fighter pat = new Fighter( game._name );
-    }else if (game.heroChoice == 2){
-      Tank pat = new Tank( game._name );
-    }else{
-      Healer pat = new Healer( game._name );
-    }
-    
     int encounters = 0;
 
     while( encounters < MAX_ENCOUNTERS ) {
-    if ( !game.playTurn(pat) )
+    if ( !game.playTurn() )
     break;
     encounters++;
     System.out.println();

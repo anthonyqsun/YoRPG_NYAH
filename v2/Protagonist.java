@@ -15,4 +15,13 @@ public class Protagonist extends Character {
   public String getName() {
     return name;
   }
+
+  public void specialize() {
+    return;
+  }
+  
+  public void normalize() {
+    return;
+  }
+
 }
