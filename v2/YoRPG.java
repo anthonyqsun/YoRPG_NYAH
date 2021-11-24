@@ -34,6 +34,7 @@ public class YoRPG {
   private boolean gameOver;
   private int difficulty;
   private int heroChoice;
+  private double monsterRandomizer;
 
   private InputStreamReader isr;
   private BufferedReader in;
