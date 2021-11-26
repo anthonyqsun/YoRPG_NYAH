@@ -40,6 +40,8 @@
 - Add Monster subclasses: Goblin, Troll, and Dragon
 - Modify the driver class so that the player can choose their role
 - Add a randomizer in the driver class to choose the type of Monster
+### v3
+- Add descriptions for each character when picking
 ---
 ## Our Future Plans
 ### Additions
