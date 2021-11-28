@@ -5,4 +5,8 @@ public class Monster extends Character {
     defense = 5;
     attackRating = 1.0;
   }
+
+  public String toString() {
+    return "";
+  }
 }

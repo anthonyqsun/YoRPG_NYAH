@@ -32,16 +32,17 @@
 ---
 ## Version-to-Version Changes
 ### v0
-- Add the Protagonist and Monster classes with all of the methods and variable which we knew we needed from the drived class
+- Added the Protagonist and Monster classes with all of the methods and variable which we knew we needed from the drived class
 ### v1
-- Add the Character superclass and made the Protagonist and Monster classes subclasses of Character
+- Added the Character superclass and made the Protagonist and Monster classes subclasses of Character
 ### v2
-- Add Protagonist subclasses: Fighter, Tank, and Healer
-- Add Monster subclasses: Goblin, Troll, and Dragon
-- Modify the driver class so that the player can choose their role
-- Add a randomizer in the driver class to choose the type of Monster
+- Added Protagonist subclasses: Fighter, Tank, and Healer
+- Added Monster subclasses: Goblin, Troll, and Dragon
+- Modified the driver class so that the player can choose their role
+- Added a randomizer in the driver class to choose the type of Monster
 ### v3
-- Add descriptions for each character when picking
+- Added descriptions for each character when picking
+- Implemented toString() methods to make referencing monsters easier
 ---
 ## Our Future Plans
 ### Additions

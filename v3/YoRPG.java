@@ -139,14 +139,12 @@ public class YoRPG {
       monsterRandomizer = (Math.random() * difficulty);
       if (monsterRandomizer <= 0.5) {
         smaug = new Goblin();
-        System.out.println( "\nLo, yonder Goblin approacheth!" );
       }else if (monsterRandomizer <= 2.0) {
         smaug = new Troll();
-        System.out.println( "\nLo, yonder Troll approacheth!" );
       }else if (monsterRandomizer <= 3.0){
         smaug = new Dragon();
-        System.out.println( "\nLo, yonder Dragon approacheth!" );
       }
+      System.out.println( "\nLo, yonder " + smaug + "approacheth!" );
 	    
 	    //smaug = new Monster();
 
@@ -173,7 +171,7 @@ public class YoRPG {
         System.out.println( "\n" + pat.getName() + " dealt " + d1 +
                             " points of damage.");
 
-        System.out.println( "\n" + "Ye Olde Monster smacked " + pat.getName() +
+        System.out.println( "\n" + smaug + " smacked " + pat.getName() +
                             " for " + d2 + " points of damage.");
 	    }//end while
 
